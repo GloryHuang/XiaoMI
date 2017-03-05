@@ -120,19 +120,24 @@ $(document).ready(function() {
 	//	for(var j = 0; j < Arr.length; j++) {
 	//		$(".item-r div").eq(j).show().siblings("div").hide();
 	//	}
-	var divs = $(".item");
+//	var divs = $(".item");
 //	var divArr = jQuery.makeArray(divs);
-	
-	console.log(divArr);
-	for(var i = 0; i < divs.length; i++) {
-		
-//		var str = divs[i].className.substr(0, 9);
-//		console.log(str);
-		$("." + str + " .item-r" + " div").eq(0).show().siblings("div").hide();
-//		console.log($("." + str + " .item-r" + " div").eq(0));
-		listTab(str);
+//
+//		console.log(divArr);
+////	console.log(divs);
+//
+//	for(var i = 0; i < divs.length; i++) {
+
+		//		var str = divs[i].className.substr(0, 9);
+		//		console.log(str);
+
+
+
+//		$(+divs[i] + " .item-r" + " div").eq(0).show().siblings("div").hide();
+		//		console.log($("." + str + " .item-r" + " div").eq(0));
+		//		listTab(str);
 		//			console.log(str);
-	}
+//	}
 
 	//	console.log($(".item .shop-list"));
 	//
