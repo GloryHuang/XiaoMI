@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="js/jquery-1.11.0.js"></script>
+		<script type="text/javascript">
+			$(function() {
+
+				$(".nav_list_s").mouseenter(function() {
+					$(this).addClass("nav_list_s01").siblings().removeClass("nav_list_s01");
+					$(".nav_detailBox").show();
+					$(".nav_detailBox").children(".nav_detail").eq($(this).index()).show().siblings().hide();
+				})
+				$(".nav_left").mouseleave(function() {
+					$(this).find(".nav_list_s").removeClass("nav_list_s01");
+					$(".nav_detailBox").stop().hide();
+				})
+			});
+		</script>
+	</head>
+
+	<body>
+		<div class="nav_left">
+			<div class="nav_top"></div>
+			<div class="nav_tilte">全部商品分类</div>
+			<div class="dd">
+				<div class="nav_list">
+					<div class="nav_list_s ">
+						<span class="nav_span"><a href="#">手机、</a><a href="#">数码、</a><a href="#">京东通信</a></span>
+						<i class="nav_arrow">></i>
+					</div>
+					<div class="nav_list_s">
+						<span class="nav_span"><a href="#">手机、</a><a href="#">数码、</a><a href="#">京东通信</a></span>
+						<i class="nav_arrow">></i>
+					</div>
+					<div class="nav_list_s">
+						<span class="nav_span"><a href="#">手机、</a><a href="#">数码、</a><a href="#">京东通信</a></span>
+						<i class="nav_arrow">></i>
+					</div>
+				</div>
+				<div class="nav_detailBox">
+					<div class="nav_detail">
+						<a href="#">111详细的子菜单，这里就不写了</a>
+					</div>
+					<div class="nav_detail">
+						<a href="#">22222详细的子菜单，这里就不写了</a>
+					</div>
+					<div class="nav_detail">
+						<a href="#">3333详细的子菜单，这里就不写了</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+
+</html>
