@@ -95,14 +95,84 @@ $(document).ready(function() {
 
 	/********************明星单品界面********************/
 	$(".shop-btn a").eq(0).on("click", function() {
-		alert(1);
+		itemShow(true, this);
 	});
-	
+
 	$(".shop-btn a").eq(1).on("click", function() {
-		var a=$(".shop-item ul").width()/2;
-		console.log(a);
-		$(".shop-item").animate({"margin-left":-a},2000);
+		itemShow(false, this);
 	});
+
+	autoPlay();
+
+	$(".shop-btn a").eq(0).on("click", function() {
+		itemShow(true, this);
+	});
+
+	$(".shop-btn a").eq(1).on("click", function() {
+		itemShow(false, this);
+	});
+
+	/********************List切换********************/
+	//	$(".item-r div").eq(0).show().siblings("div").hide();
+	//	console.log($(".item-r").length);
+	//	var Arr = jQuery.makeArray($(".item-r div"));
+	//	console.log(Arr);
+	//	for(var j = 0; j < Arr.length; j++) {
+	//		$(".item-r div").eq(j).show().siblings("div").hide();
+	//	}
+	var divs = $(".item");
+//	var divArr = jQuery.makeArray(divs);
+	
+	console.log(divArr);
+	for(var i = 0; i < divs.length; i++) {
+		
+//		var str = divs[i].className.substr(0, 9);
+//		console.log(str);
+		$("." + str + " .item-r" + " div").eq(0).show().siblings("div").hide();
+//		console.log($("." + str + " .item-r" + " div").eq(0));
+		listTab(str);
+		//			console.log(str);
+	}
+
+	//	console.log($(".item .shop-list"));
+	//
+	//		var divs = $(".item-r");
+	//		//将JQ数组转换成js数组
+	//		var divArr = jQuery.makeArray(divs);
+	//		console.log(divArr);
+	//		console.log(divs.length);
+	//		//	console.logo($( "+"divs"+" "+"div"));
+	//		//	console.log(" "+divs+" " + "div");
+	//	
+	//		for(var i = 0; i < divArr.length; i++) {
+	//			var str = divArr[i].className.substr(0, 6);
+	//			listTab(str);
+	//	
+	//	}
+	//	console.log("-------");
+	//
+	//	var divsa = $(".shop-list");
+	//	//		//将JQ数组转换成js数组
+	//	var divArrs = jQuery.makeArray(divsa);
+
+	//	for(var i = 0; i < divArrs.length; i++) {
+	//		var strd = divArrs[i].className.substr(0, 9);
+	//		listTab(strd);
+	//
+	//		console.log(strd);
+
+	//		console.log(this);
+	//		console.log(divArr[i].className);
+	//		var str = (divArr[i]).substr(0, 11);
+	//		console.log(str);
+
+	//	}
+
+	//	$(".item-r div").eq(0).show().siblings("div").hide();
+	//	$(".shop-list li").on("mouseenter", function() {
+	//		$(this).siblings("li").removeClass("current").end().addClass("current");
+	//		$(".item-r div").eq($(this).index()).show().siblings("div").hide();
+	//	});
 
 });
 var timer = null;
@@ -146,4 +216,48 @@ function bannerShow(flag) {
 		}
 	}
 	//	console.log(i);
+}
+
+function autoPlay() {
+	var aL = document.getElementById("sp-item-l");
+	var aR = document.getElementById("sp-item-r");
+	var flag = true;
+	timer = setInterval(function() {
+
+		if(flag) {
+			itemShow(true, aL);
+			flag = false;
+		} else {
+			itemShow(false, aR);
+			flag = true;
+		}
+
+	}, 5000);
+
+}
+
+function itemShow(flag, ele) {
+
+	if(flag) {
+		$(ele).siblings("a").addClass("sp-ahover").end().removeClass("sp-ahover");
+		$(".shop-item ul").animate({ "margin-left": 0 }, 600);
+	} else {
+		$(ele).siblings("a").addClass("sp-ahover").end().removeClass("sp-ahover");
+		var a = $(".shop-item ul").width() / 2;
+		$(".shop-item ul").animate({ "margin-left": -a }, 600);
+
+	}
+}
+
+function listTab(ele) {
+	//		console.log(ele);
+	$("." + ele + " " + ".shop-list" + " li").on("mouseenter", function() {
+
+		console.log($(this));
+		$(this).siblings("li").removeClass("current").end().addClass("current");
+		$("." + ele + " item-r" + " div").eq($(this).index()).show().siblings("div").hide();
+		//				console.log($("." + ele + " " + "div"));
+		console.log($("." + ele + " item-r" + " div").eq($(this).index()));
+	});
+
 }

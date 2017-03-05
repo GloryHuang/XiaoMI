@@ -513,6 +513,10 @@ a {
 	font: 20px/25px "微软雅黑";
 }
 
+.sp-ahover {
+	color: #FF6700;
+}
+
 .shop-btn i {
 	font-size: 20px;
 	color: #b0b0b0;
