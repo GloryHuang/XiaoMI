@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(window).ready(function() {
 
 	/********************购物车********************/
 	$("#spc").on("mouseenter", function() {
@@ -195,7 +195,8 @@ function showImg() {
 }
 
 function bannerShow(flag) {
-	var div = document.getElementsByClassName("content-r")[0];
+//	var div = document.getElementsByClassName("content-r")[0];
+	var div=document.getElementById("ct-r");
 	var imgArr = div.children;
 
 	if(flag) {
@@ -266,3 +267,5 @@ function listTab(ele) {
 	});
 
 }
+
+
