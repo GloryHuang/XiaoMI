@@ -480,7 +480,11 @@ a {
 	width: 315px;
 	height: 170px;
 }
+.star-shop{
+	overflow: hidden;
+	background-color: #F5F5F5;
 
+}
 .star-shop h2,
 .item-head h2 {
 	width: 700px;
