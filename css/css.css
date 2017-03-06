@@ -496,10 +496,13 @@ a {
 	margin-top: 10px;
 
 }*/
-
+.shop-list{
+	overflow: hidden;
+}
 .shop-btn,
 .shop-list {
 	float: right;
+	
 	padding-top: 20px;
 }
 
@@ -563,6 +566,7 @@ a {
 .item,
 .item-head {
 	overflow: hidden;
+	background-color: #F5F5F5;
 }
 
 .shop-item p,
@@ -599,6 +603,11 @@ a {
 .item-r {
 	width: 978px;
 	margin-left: 10px;
+}
+
+.item-r div ul {
+	width: 992px;
+	overflow: hidden;
 }
 
 .item-r img {
@@ -714,6 +723,10 @@ a {
 	color: #FF6700;
 }
 
+.footer{
+	margin-top: ;
+}
+
 .policy {
 	border-bottom: 1px solid #e0e0e0;
 	overflow: hidden;
@@ -749,11 +762,17 @@ a {
 
 .help dl {
 	float: left;
-	width: 61px;
+	width: 160px;
 	height: 155px;
-	margin-right: 100px;
+	/*margin-right: 100px;*/
 }
 
+.help a{
+	overflow: hidden;
+	display: block;
+	font-size: 12px;
+	color: #757575;
+}
 .help dt {
 	margin: 0 0px 25px 0px;
 	color: #424242;
@@ -764,10 +783,10 @@ a {
 	margin-bottom: 5px;
 }
 
-.help dd a {
+/*.help dd a {
 	font-size: 12px;
 	color: #757575;
-}
+}*/
 
 .help dd a:hover {
 	color: #FF6700;
