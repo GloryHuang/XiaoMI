@@ -114,6 +114,8 @@ $(window).ready(function() {
 
 	/********************List切换********************/
 	listHide();
+
+	
 });
 var timer = null;
 var i = 0;
@@ -202,12 +204,12 @@ function listHide() {
 		$(".item-r:eq(" + i + ") div").eq(0).show().siblings("div").hide();
 
 		$(".shop-list:eq(" + i + ")").find("li").on("mouseenter", function() {
-			
+
 			//获取元素在数组中的下标
-//			console.log(brr.index($(this).parent().parent()));
-			var index=brr.index($(this).parent().parent());
+			//			console.log(brr.index($(this).parent().parent()));
+			var index = brr.index($(this).parent().parent());
 			$(this).siblings("li").removeClass("current").end().addClass("current");
-			$(".none  .item-r:eq("+index+") div").eq($(this).index()).show().siblings("div").hide();
+			$(".none  .item-r:eq(" + index + ") div").eq($(this).index()).show().siblings("div").hide();
 
 		});
 

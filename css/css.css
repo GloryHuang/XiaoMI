@@ -427,6 +427,7 @@ a {
 .ad {
 	margin-top: 8px;
 	overflow: hidden;
+	padding-bottom: 10px;
 }
 
 .ad-l {
@@ -476,15 +477,20 @@ a {
 	padding-left: 15px;
 }
 
+.ad-r ul li img:hover {
+	box-shadow: 0px 10px 12px #ccc;
+}
+
 .ad-r img {
 	width: 315px;
 	height: 170px;
 }
-.star-shop{
-	overflow: hidden;
-	background-color: #F5F5F5;
 
+.star-shop {
+	overflow: hidden;
+	/*	background-color: #F5F5F5;*/
 }
+
 .star-shop h2,
 .item-head h2 {
 	width: 700px;
@@ -500,13 +506,14 @@ a {
 	margin-top: 10px;
 
 }*/
-.shop-list{
+
+.shop-list {
 	overflow: hidden;
 }
+
 .shop-btn,
 .shop-list {
 	float: right;
-	
 	padding-top: 20px;
 }
 
@@ -611,6 +618,7 @@ a {
 
 .item-r div ul {
 	width: 992px;
+	overflow: hidden;
 }
 
 .item-r img {
@@ -625,6 +633,19 @@ a {
 	float: left;
 	background: white;
 	margin: 0 14px 14px 0;
+	transition: all 0.5s;
+}
+
+.item-r ul li:nth-child(5) {
+	clear: left;
+}
+
+.item-r li:hover,
+.item-l img:hover,
+.hot-comment li:hover {
+	box-shadow: -2px 5px 20px 5px #ccc;
+	margin-top: -5px;
+	cursor: pointer;
 }
 
 .shop-list {
@@ -649,6 +670,25 @@ a {
 	margin: 45px 0px 23px 0;
 	font-size: 18px;
 	color: green;
+}
+
+.play-icon {
+	width: 50px;
+	height: 50px;
+	position: absolute;
+	top: 130px;
+	left: 10px;
+}
+
+.play-icon i {
+	font-size: 35px;
+	color: #ccc;
+	text-align: center;
+}
+
+.hot-comment i:hover {
+	color: #FF6700;
+	cursor: pointer;
 }
 
 .p-title a {
@@ -682,6 +722,7 @@ a {
 
 .hot-comment {
 	overflow: hidden;
+	padding-bottom: 10px;
 }
 
 .hot-comment ul li {
@@ -690,6 +731,7 @@ a {
 	float: left;
 	margin-right: 15px;
 	background-color: white;
+	position: relative;
 }
 
 .hot-comment img {
@@ -726,7 +768,7 @@ a {
 	color: #FF6700;
 }
 
-.footer{
+.footer {
 	margin-top: ;
 }
 
@@ -770,12 +812,13 @@ a {
 	/*margin-right: 100px;*/
 }
 
-.help a{
+.help a {
 	overflow: hidden;
 	display: block;
 	font-size: 12px;
 	color: #757575;
 }
+
 .help dt {
 	margin: 0 0px 25px 0px;
 	color: #424242;
@@ -785,6 +828,7 @@ a {
 .help dd {
 	margin-bottom: 5px;
 }
+
 
 /*.help dd a {
 	font-size: 12px;
