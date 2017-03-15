@@ -103,7 +103,7 @@ $(window).ready(function() {
 	});
 
 	autoPlay();
-
+ 
 	$(".shop-btn a").eq(0).on("click", function() {
 		itemShow(true, this);
 	});
@@ -120,9 +120,11 @@ $(window).ready(function() {
 var timer = null;
 var i = 0;
 
+//清除定时器
 function clear() {
 	clearInterval(timer);
 }
+
 
 function showImg() {
 	clearInterval(timer);
@@ -131,6 +133,7 @@ function showImg() {
 	}, 2000);
 }
 
+//轮播图
 function bannerShow(flag) {
 	//	var div = document.getElementsByClassName("content-r")[0];
 	var div = document.getElementById("ct-r");
@@ -160,7 +163,7 @@ function bannerShow(flag) {
 	}
 	//	console.log(i);
 }
-
+//自动播放
 function autoPlay() {
 	var aL = document.getElementById("sp-item-l");
 	var aR = document.getElementById("sp-item-r");
@@ -179,6 +182,7 @@ function autoPlay() {
 
 }
 
+//无缝轮播
 function itemShow(flag, ele) {
 
 	if(flag) {
@@ -192,6 +196,7 @@ function itemShow(flag, ele) {
 	}
 }
 
+//tab切换商品列表
 function listHide() {
 	var Arr = $(".none .item-r");
 	//	var arr = jQuery.makeArray(Arr);
